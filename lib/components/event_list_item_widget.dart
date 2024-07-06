@@ -7,14 +7,14 @@ export 'event_list_item_model.dart';
 class EventListItemWidget extends StatefulWidget {
   const EventListItemWidget({
     super.key,
-    required this.parameter1,
-    required this.parameter2,
-    required this.parameter3,
+    required this.eventName,
+    required this.eventDesc,
+    required this.status,
   });
 
-  final String? parameter1;
-  final String? parameter2;
-  final int? parameter3;
+  final String? eventName;
+  final String? eventDesc;
+  final int? status;
 
   @override
   State<EventListItemWidget> createState() => _EventListItemWidgetState();
@@ -74,7 +74,7 @@ class _EventListItemWidgetState extends State<EventListItemWidget> {
                     padding:
                         const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                     child: Text(
-                      widget.parameter1!,
+                      widget.eventName!,
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Readex Pro',
                             letterSpacing: 0.0,
@@ -82,7 +82,7 @@ class _EventListItemWidgetState extends State<EventListItemWidget> {
                     ),
                   ),
                   Text(
-                    widget.parameter2!,
+                    widget.eventDesc!,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
                           letterSpacing: 0.0,
@@ -93,7 +93,7 @@ class _EventListItemWidgetState extends State<EventListItemWidget> {
             ),
             Text(
               valueOrDefault<String>(
-                widget.parameter3 == 0 ? 'Free' : 'Paid',
+                widget.status == 0 ? 'Free' : 'Paid',
                 'Free',
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(

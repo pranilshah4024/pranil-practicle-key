@@ -108,20 +108,13 @@ class _AllEventsWidgetState extends State<AllEventsWidget> {
                             listViewIndex,
                           ),
                           updateCallback: () => setState(() {}),
-                          child: Hero(
-                            tag: 'event_list_item',
-                            transitionOnUserGestures: true,
-                            child: Material(
-                              color: Colors.transparent,
-                              child: EventListItemWidget(
-                                key: Key(
-                                  'Keytdt_${listViewGetEventsRow.id.toString()}',
-                                ),
-                                parameter1: listViewGetEventsRow.name,
-                                parameter2: listViewGetEventsRow.desc,
-                                parameter3: listViewGetEventsRow.status,
-                              ),
+                          child: EventListItemWidget(
+                            key: Key(
+                              'Keytdt_${listViewGetEventsRow.id.toString()}',
                             ),
+                            eventName: listViewGetEventsRow.name,
+                            eventDesc: listViewGetEventsRow.desc,
+                            status: listViewGetEventsRow.status,
                           ),
                         );
                       },
