@@ -68,7 +68,7 @@ class _AddEventWidgetState extends State<AddEventWidget> {
             },
           ),
           title: Text(
-            'AddEvent',
+            'Add Event',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Outfit',
                   color: Colors.white,
